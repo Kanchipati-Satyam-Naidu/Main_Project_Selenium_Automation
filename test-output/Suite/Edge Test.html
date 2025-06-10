@@ -1,0 +1,1397 @@
+<html>
+<head>
+<title>TestNG:  Edge Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Edge Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>66/22/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jun 02 15:14:30 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>177 seconds (177927 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation()'><b>backBtnValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Aravind, aravind@gmail.com, 3, Senior Asscoiate, 22, 13, Mongo DB, MySQL,Spring, react.js</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1574293237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1574293237'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah@@987, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace949681243", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace949681243'><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation()'><b>backBtnValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Rithika, rithika@gmail.com, 5, Senior Manager, 40, 20, Java, python, javascript</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace839245063", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace839245063'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Prasanna, prasanna@gmail.com, 6, Senior Developer, 18.5, 3.9, Java , Python , C# , Ruby, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1364559510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1364559510'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 4.8</td>
+<td><div><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [4.8] but found [4.8]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace82894067", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace82894067'><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [4.8] but found [4.8]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, -5, -2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace208423019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace208423019'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah987, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1120344975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1120344975'><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>2</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: , jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1494270969", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1494270969'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation()'><b>backBtnValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Subhasri, subhasri@gmail.com, 4, Senior Associate, 20, 15, C, C++, Java</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1358628759", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1358628759'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;btn btn-back&apos;]&quot;}
+  (Session info: MicrosoftEdge=136.0.3240.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76467a169684ebe8d43fe83f54d1b0aa, findElement {using=xpath, value=//a[@class=&apos;btn btn-back&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 136.0.3240.92, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61544}, msedge: {msedgedriverVersion: 136.0.3240.104 (6a705373902..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61544/devtoo..., se:cdpVersion: 136.0.3240.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76467a169684ebe8d43fe83f54d1b0aa
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
+	at app.vercel.devProfileEight.pageObjects.PortfolioPage.getBackButton(PortfolioPage.java:98)
+	at app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.backBtnValidation(TS04_PortfolioPageValidation.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Maha, 9442385, 2, SDE, 6, 1, JS , Java , React , Python, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516545316", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace516545316'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, , 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1701759971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1701759971'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 4.8</td>
+<td><div><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [4.8] but found [4.8]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1477151652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1477151652'><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [4.8] but found [4.8]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: -3</td>
+<td><div><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [-3] but found [-3]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace883001809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace883001809'><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [-3] but found [-3]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 12345, xzy@gmail.com, 3, 98765, 5, 4, $$$$$$$$$$$$, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace515070690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace515070690'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah@@987, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990039312", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990039312'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: -3</td>
+<td><div><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [-3] but found [-3]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace63687423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace63687423'><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [-3] but found [-3]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, , 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace105096790", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace105096790'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: 12345, xzy@gmail.com, 3, 98765, 5, 4, $$$$$$$$$$$$, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1351381338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1351381338'><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, 5, , C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2031321450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2031321450'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Steven, steven345@gmail.com, 5, SDE, b, c, Java , Python , C# , FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace331717311", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331717311'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, , 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace444396742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace444396742'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah987, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace474416249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace474416249'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:137)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Prasanna, prasanna@gmail.com, 6, Senior Developer, 18.5, 3.9, Java , Python , C# , Ruby, FALSE</td>
+<td></td>
+<td>2</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 2</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 3x1</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.websitesDevelopedEnableCheck()'><b>websitesDevelopedEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 3x1</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 4</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Conrad, conrad65@gmail.com, 4, Senior Developer, 16, 4, JS , Java , React , PythonC,Node,Express, TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.jobTitleFieldEnableCheck()'><b>jobTitleFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Steven, steven345@gmail.com, 5, SDE, b, c, Java , Python , C# , FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, , 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 2</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.nameFieldEnableCheck()'><b>nameFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.emailFieldEnableCheck()'><b>emailFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 5</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Senior Associate</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: a4r3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.subTitleCheck()'><b>subTitleCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.measureBtnClickCheck()'><b>measureBtnClickCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.experienceFieldEnableCheck()'><b>experienceFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, , 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1@3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, , TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Manager</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Siva@gmail.com</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 7</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: qwer</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1@3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, 5, , C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.avatarValidation()'><b>avatarValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Rithika, rithika@gmail.com, 5, Senior Manager, 40, 20, Java, python, javascript</td>
+<td></td>
+<td>2</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.checkWebTitle()'><b>checkWebTitle</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: a4r3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 8</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, -5, -2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 9</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.headerCheck()'><b>headerCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.avatarValidation()'><b>avatarValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Aravind, aravind@gmail.com, 3, Senior Asscoiate, 22, 13, Mongo DB, MySQL,Spring, react.js</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: ##$3@</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, Programmer Analyst, 5, 2, , TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 2</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, , Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 6</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: #$$#@</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Python</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: C#</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation.avatarValidation()'><b>avatarValidation</b><br>Test class: app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation<br>Parameters: Subhasri, subhasri@gmail.com, 4, Senior Associate, 20, 15, C, C++, Java</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation@6bedbc4d</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, , Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Intern</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.skillsFieldEnableCheck()'><b>skillsFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Maha, 9442385, 2, SDE, 6, 1, JS , Java , React , Python, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 3, , 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: , jere1774@gmail.com, 3, Programmer Analyst, 5, 2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@57af006c</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.appsMadeEnableCheck()'><b>appsMadeEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 10+</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.createPortfolioBtnClickCheck()'><b>createPortfolioBtnClickCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@193f604a</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Conrad, conrad65@gmail.com, 4, Senior Developer, 16, 4, JS , Java , React , PythonC,Node,Express, TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: qwer</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Siva@1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Python,java</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@20f5239f</td></tr>
+</table><p>
+</body>
+</html>

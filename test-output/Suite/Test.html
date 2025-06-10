@@ -1,0 +1,708 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>51/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jun 01 10:25:14 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>95 seconds (95528 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Maha, 9442385, 2 years, SDE, 6, 1, JS , Java , React , Python, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1012975233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1012975233'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: -4</td>
+<td><div><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [-4] but found [-4]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1601800698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1601800698'><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [-4] but found [-4]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Prasanna, prasanna@gmail.com, 6 years, Senior Developer, 18.5, 3.9, Java , Python , C# , Ruby, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace870219581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace870219581'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 1 year, Programmer Analyst, -5, -2, C,C++,Java,Node,Express, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1370456137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1370456137'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>6</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: 12345, xzy@gmail.com, 3 years, 98765, 5, 4, $$$$$$$$$$$$, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1898324000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1898324000'><pre>java.lang.AssertionError: Invalid details entered still creating portifolio and navigating to portifolio page expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile(TS03_PortfolioBtnValidation.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@6986bbaf</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 9.8</td>
+<td><div><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [9.8] but found [9.8]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:73)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1146318308", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1146318308'><pre>java.lang.AssertionError: Apps Made Input field is allowing Invalid input did not expect [9.8] but found [9.8]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest(TS02_InputValidation.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 12345, xzy@gmail.com, 3 years, 98765, 5, 4, $$$$$$$$$$$$, FALSE</td>
+<td><div><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2003287374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2003287374'><pre>java.lang.AssertionError: Alert is not raised even if the details are not valid expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest(TS02_InputValidation.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: -4</td>
+<td><div><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [-4] but found [-4]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1152298548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1152298548'><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [-4] but found [-4]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 9.8</td>
+<td><div><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [9.8] but found [9.8]
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace851074149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace851074149'><pre>java.lang.AssertionError: Websites Developed Input field is allowing Invalid input did not expect [9.8] but found [9.8]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1594)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2217)
+	at app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest(TS02_InputValidation.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 12</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.websitesDevelopedFieldTest()'><b>websitesDevelopedFieldTest</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 2 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: @#$</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 6 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.measureBtnClickTest()'><b>measureBtnClickTest</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.appsMadeFieldTest()'><b>appsMadeFieldTest</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 7 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.skillsField()'><b>skillsField</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 9 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1qw3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1qw3</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.headerCheck()'><b>headerCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 12</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Siva@123</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.subTitleCheck()'><b>subTitleCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Prasanna, prasanna@gmail.com, 6 years, Senior Developer, 18.5, 3.9, Java , Python , C# , Ruby, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@6986bbaf</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Maha, 9442385, 2 years, SDE, 6, 1, JS , Java , React , Python, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@6986bbaf</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.jobTitleFieldEnableCheck()'><b>jobTitleFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 10+ years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.createPortfolio()'><b>createPortfolio</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Srikanth</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 4 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 3 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 5 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1@23</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: qwer</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.emailFieldEnableCheck()'><b>emailFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Manager</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Conrad, conrad65@gmail.com, 4 years, Senior Developer, 16, 4, JS , Java , React , Python,C,Node,Express, TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@6986bbaf</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: srikanth@gmail.com</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: C#,C++</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation.detailsEntryTestAndCreateProfile()'><b>detailsEntryTestAndCreateProfile</b><br>Test class: app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation<br>Parameters: Jeremiah, jere1774@gmail.com, 1 year, Programmer Analyst, -5, -2, C,C++,Java,Node,Express, FALSE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation@6986bbaf</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Senior Associate</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.measureProfileTest()'><b>measureProfileTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Conrad, conrad65@gmail.com, 4 years, Senior Developer, 16, 4, JS , Java , React , Python,C,Node,Express, TRUE</td>
+<td></td>
+<td>1</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Java</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.nameFieldValidationTest()'><b>nameFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1234</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.experienceFieldEnableCheck()'><b>experienceFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Siva@123</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.jobTitleFieldValidationTest()'><b>jobTitleFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Intern</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.websitesDevelopedFieldValidationTest()'><b>websitesDevelopedFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: qwer</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.emailFieldValidationTest()'><b>emailFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: @#$</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 8 years</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.appsMadeFieldValidationTest()'><b>appsMadeFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1@23</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.checkWebTitle()'><b>checkWebTitle</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.experienceFieldValidationTest()'><b>experienceFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: 1 year</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS01_HomePageValidation.nameFieldEnableCheck()'><b>nameFieldEnableCheck</b><br>Test class: app.vercel.devProfileEight.tests.TS01_HomePageValidation</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS01_HomePageValidation@76884e4b</td></tr>
+<tr>
+<td title='app.vercel.devProfileEight.tests.TS02_InputValidation.skillsFieldValidationTest()'><b>skillsFieldValidationTest</b><br>Test class: app.vercel.devProfileEight.tests.TS02_InputValidation<br>Parameters: Python,Java</td>
+<td></td>
+<td>0</td>
+<td>app.vercel.devProfileEight.tests.TS02_InputValidation@b1712f3</td></tr>
+</table><p>
+</body>
+</html>

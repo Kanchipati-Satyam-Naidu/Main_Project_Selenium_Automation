@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="app.vercel.devProfileEight.utilities.TestNGListeners"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Edge Test(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation">
+        <methods>
+          <include name="setUp"/>
+          <include name="backBtnValidation" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+          <include name="methodSetup"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation -->
+      <class name="app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation">
+        <methods>
+          <include name="detailsEntryTestAndCreateProfile" invocation-numbers="0 6 14"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="methodSetup"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation -->
+      <class name="app.vercel.devProfileEight.tests.TS02_InputValidation">
+        <methods>
+          <include name="setUp"/>
+          <include name="measureProfileTest" invocation-numbers="0 1 2 3 5 6 7 8 10 11 12 14"/>
+          <include name="tearDown"/>
+          <include name="appsMadeFieldValidationTest" invocation-numbers="1 2"/>
+          <include name="websitesDevelopedFieldValidationTest" invocation-numbers="1 2"/>
+          <include name="methodSetup"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS02_InputValidation -->
+    </classes>
+  </test> <!-- Edge Test(failed) -->
+  <test thread-count="2" parallel="tests" name="Chrome Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation">
+        <methods>
+          <include name="setUp"/>
+          <include name="backBtnValidation" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+          <include name="methodSetup"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS04_PortfolioPageValidation -->
+      <class name="app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation">
+        <methods>
+          <include name="detailsEntryTestAndCreateProfile" invocation-numbers="0 6 14"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="methodSetup"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS03_PortfolioBtnValidation -->
+      <class name="app.vercel.devProfileEight.tests.TS02_InputValidation">
+        <methods>
+          <include name="setUp"/>
+          <include name="measureProfileTest" invocation-numbers="0 1 2 3 5 6 7 8 10 11 12 14"/>
+          <include name="tearDown"/>
+          <include name="appsMadeFieldValidationTest" invocation-numbers="1 2"/>
+          <include name="methodSetup"/>
+          <include name="websitesDevelopedFieldValidationTest" invocation-numbers="1 2"/>
+          <include name="methodTearDown"/>
+        </methods>
+      </class> <!-- app.vercel.devProfileEight.tests.TS02_InputValidation -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
